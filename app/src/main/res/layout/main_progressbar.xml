@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressOuterRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/loadingRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/cloudIV"-->
+            <!--android:layout_width="260dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/loading_cloud" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/loadingBGIV"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="140dp"-->
+            <!--android:layout_marginTop="40dp"-->
+            <!--android:src="@mipmap/loading_bg" />-->
+
+        <ImageView
+            android:id="@+id/loadingIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/progress_loading" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/errorLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/errorIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/img_no_network" />
+
+        <TextView
+            android:id="@+id/tipTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="当前网络不可用"
+            android:drawableRight="@mipmap/contacts_icon_img"
+            android:drawablePadding="10dp"
+            android:textColor="@color/font_gray2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/repeatTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="点击屏幕刷新"
+            android:textColor="@color/font_blue02"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>
